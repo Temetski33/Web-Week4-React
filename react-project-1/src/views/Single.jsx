@@ -13,7 +13,7 @@ const Single = () => {
         <div>{item.title}</div>
         <div>{item.description}</div>
         <div>{item.username}</div>
-        {/* Jos kuva niin laitetaan kuva, jos video niin video */}
+        {/* TODO himas Jos kuva niin laitetaan kuva, jos video niin video */}
       </div>
     )}
   </>
