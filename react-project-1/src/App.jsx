@@ -1,16 +1,22 @@
 import './App.css';
-import Home from './components/Home';
-import Counter from './components/Counter';
-import { PizzaMenu } from './components/PizzaMenu';
+import Layout from './components/Layout';
+import {BrowserRouter, Route, Routes} from 'react-router';
+import Profile from './views/Profile';
+
 
  const App = () => {
    return (
-     <>
-       <h1>My App</h1>
-       <Home />
-       <PizzaMenu />
-       <Counter />
-     </>
+     <BrowserRouter>
+       <Routes>
+         <Route element={<Layout />}>
+           <Route path="/" element={<Home />} />
+           <Route path="/profile" element={<Profile />} />
+           <Route path="/upload" element={<Upload />} />
+           <Route path="/single" element={<Single />} />
+           {/* TODO: add missing routes */}
+         </Route>
+       </Routes>
+     </BrowserRouter>
    );
  };
  export default App;
